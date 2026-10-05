@@ -1,562 +1,868 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitDads 40+ - Premium Fitness & Weight Loss for Busy Fathers</title>
-    <meta name="description" content="Transform your body after 40. FitDads: Science-backed fitness, personalized coaching, and sustainable weight loss designed specifically for busy fathers.">
-    <meta name="theme-color" content="#0f172a">
-    
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- ==================== NAVBAR ==================== -->
-    <nav class="navbar">
-        <div class="container" style="padding: 0 1.5rem;">
-            <div class="navbar-content">
-                <a href="#" class="logo">
-                    💪 FitDads<span>40+</span>
-                </a>
-                
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#product" class="nav-link">Program</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                </ul>
+/* styles.css */
 
-                <div class="nav-cta" style="gap: 0.5rem;">
-                    <button class="btn btn-secondary btn-sm">Sign In</button>
-                    <button class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+/* ==================== RESET & BASE STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-tag">🎯 Transform After 40</div>
-            <h1>Reclaim Your Strength. Rebuild Your Confidence.</h1>
-            <p class="hero-subtitle">Science-backed fitness and sustainable weight loss designed specifically for busy fathers. No extreme diets. No endless gym sessions. Real results in less time.</p>
-            
-            <div class="hero-cta">
-                <button class="btn btn-primary btn-lg">Start Your Journey</button>
-                <button class="btn btn-secondary btn-lg">Watch Demo</button>
-            </div>
+html {
+    scroll-behavior: smooth;
+}
 
-            <div class="hero-stats flex">
-                <div class="stat">
-                    <div class="stat-number">94%</div>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">32 lbs</div>
-                    <div class="stat-label">Avg. Weight Loss</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">12 min</div>
-                    <div class="stat-label">Daily Workouts</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Active Members</div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ==================== BODY WITH STEP 4 PREMIUM TEXTURE ==================== */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: #0b1120;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.1) 0px, transparent 50%);
+    color: #e0e7ff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    position: relative;
+}
 
-    <!-- ==================== SOCIAL PROOF ==================== -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="social-proof-content">
-                <div class="proof-label">TRUSTED BY LEADING PUBLICATIONS</div>
-            </div>
-            <div class="proof-logos">
-                <div class="proof-logo">Forbes</div>
-                <div class="proof-logo">Men's Health</div>
-                <div class="proof-logo">Harvard Health</div>
-                <div class="proof-logo">GQ</div>
-                <div class="proof-logo">Shape</div>
-            </div>
-        </div>
-    </section>
+/* Subtle dot grid pattern overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.3;
+}
 
-    <!-- ==================== FEATURES SECTION ==================== -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">FEATURES</div>
-                <h2 class="section-title">Everything You Need to Succeed</h2>
-                <p class="section-description">A comprehensive platform built by fitness experts and real dads who understand your challenges</p>
-            </div>
+/* ==================== TYPOGRAPHY ==================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
 
-            <div class="features-grid">
-                <div class="feature-card scroll-reveal stagger-1">
-                    <div class="feature-icon">📱</div>
-                    <h3 class="feature-title">AI-Powered Coaching</h3>
-                    <p class="feature-description">Personalized workouts that adapt to your fitness level, schedule, and equipment available.</p>
-                </div>
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+}
 
-                <div class="feature-card scroll-reveal stagger-2">
-                    <div class="feature-icon">🥗</div>
-                    <h3 class="feature-title">Nutrition Plans</h3>
-                    <p class="feature-description">Flexible meal plans designed for busy fathers. No calorie counting. No complex recipes.</p>
-                </div>
+h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+}
 
-                <div class="feature-card scroll-reveal stagger-3">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Progress Tracking</h3>
-                    <p class="feature-description">Visual dashboards showing real-time progress on weight, strength, and body composition.</p>
-                </div>
+h3 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
 
-                <div class="feature-card scroll-reveal stagger-4">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">Community Support</h3>
-                    <p class="feature-description">Connect with thousands of fathers on the same journey. Share tips, motivation, and wins.</p>
-                </div>
+p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.8;
+}
 
-                <div class="feature-card scroll-reveal stagger-5">
-                    <div class="feature-icon">🧠</div>
-                    <h3 class="feature-title">Mindset Coaching</h3>
-                    <p class="feature-description">Expert guidance on habit formation, motivation, and overcoming mental barriers.</p>
-                </div>
+/* ==================== COLOR PALETTE ==================== */
+:root {
+    --primary: #3b82f6;
+    --primary-dark: #1e40af;
+    --primary-light: #60a5fa;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --success: #10b981;
+    --danger: #ef4444;
+    --neutral-dark: #0f172a;
+    --neutral-medium: #1e293b;
+    --neutral-light: #e0e7ff;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --glass-bg: rgba(15, 23, 42, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
 
-                <div class="feature-card scroll-reveal stagger-6">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Quick Workouts</h3>
-                    <p class="feature-description">Effective routines in 12-30 minutes. Perfect for busy schedules. No experience needed.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ==================== UTILITIES ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
-    <!-- ==================== PRODUCT SHOWCASE ==================== -->
-    <section class="product-showcase" id="product">
-        <div class="container">
-            <div class="showcase-content">
-                <div class="showcase-text">
-                    <h2>Your Personal Fitness Command Center</h2>
-                    <p>The FitDads app puts everything you need in one place. Track workouts, monitor nutrition, chat with coaches, and celebrate wins with your community—all from your phone.</p>
-                    
-                    <div class="showcase-features">
-                        <div class="showcase-item">
-                            <div class="showcase-check">✓</div>
-                            <div class="showcase-text-item">
-                                <strong>Daily Personalized Workouts</strong>
-                                <p>Based on your preferences, schedule, and equipment</p>
-                            </div>
-                        </div>
+.grid {
+    display: grid;
+    gap: 2rem;
+}
 
-                        <div class="showcase-item">
-                            <div class="showcase-check">✓</div>
-                            <div class="showcase-text-item">
-                                <strong>Smart Nutrition Guidance</strong>
-                                <p>Not restrictive. Real food. Real results</p>
-                            </div>
-                        </div>
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
-                        <div class="showcase-item">
-                            <div class="showcase-check">✓</div>
-                            <div class="showcase-text-item">
-                                <strong>Live Coach Access</strong>
-                                <p>1-on-1 messaging with certified fitness coaches</p>
-                            </div>
-                        </div>
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
 
-                        <div class="showcase-item">
-                            <div class="showcase-check">✓</div>
-                            <div class="showcase-text-item">
-                                <strong>Community Features</strong>
-                                <p>Challenge friends, share progress, get inspired</p>
-                            </div>
-                        </div>
-                    </div>
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-                    <button class="btn btn-primary btn-lg">Explore the App</button>
-                </div>
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
 
-                <div class="showcase-image">
-                    <div class="showcase-image-container">
-                        <div class="showcase-image-placeholder">📲</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-    <!-- ==================== BENEFITS SECTION ==================== -->
-    <section class="benefits">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">WHY FITDADS</div>
-                <h2 class="section-title">Built for the 40+ Father</h2>
-                <p class="section-description">We understand your unique challenges and created a program that fits your real life</p>
-            </div>
+.text-center {
+    text-align: center;
+}
 
-            <div class="benefits-grid">
-                <div class="benefit-item scroll-reveal stagger-1">
-                    <div class="benefit-icon">⏰</div>
-                    <h3 class="benefit-title">Time-Efficient</h3>
-                    <p class="benefit-description">Workouts that deliver maximum results in minimum time. 12-30 minutes is all you need.</p>
-                </div>
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-                <div class="benefit-item scroll-reveal stagger-2">
-                    <div class="benefit-icon">🏥</div>
-                    <h3 class="benefit-title">Joint-Friendly</h3>
-                    <p class="benefit-description">Science-backed exercises that protect your joints while building strength and endurance.</p>
-                </div>
+.text-accent {
+    color: #f59e0b;
+}
 
-                <div class="benefit-item scroll-reveal stagger-3">
-                    <div class="benefit-icon">🎯</div>
-                    <h3 class="benefit-title">Sustainable Results</h3>
-                    <p class="benefit-description">No extreme measures. Build lasting habits that fit your lifestyle and family commitments.</p>
-                </div>
+/* ==================== BUTTONS & FORMS ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
 
-                <div class="benefit-item scroll-reveal stagger-4">
-                    <div class="benefit-icon">💰</div>
-                    <h3 class="benefit-title">Budget-Friendly</h3>
-                    <p class="benefit-description">No expensive gym memberships or equipment needed. Train at home with minimal setup.</p>
-                </div>
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
 
-                <div class="benefit-item scroll-reveal stagger-5">
-                    <div class="benefit-icon">📈</div>
-                    <h3 class="benefit-title">Proven Methods</h3>
-                    <p class="benefit-description">Built on peer-reviewed research and tested by thousands of fathers with real results.</p>
-                </div>
+.btn:hover::before {
+    left: 100%;
+}
 
-                <div class="benefit-item scroll-reveal stagger-6">
-                    <div class="benefit-icon">👨‍👨‍👧</div>
-                    <h3 class="benefit-title">Family-Compatible</h3>
-                    <p class="benefit-description">Fit training into your busy schedule. No early morning drives to the gym required.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.btn > * {
+    position: relative;
+    z-index: 1;
+}
 
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">TESTIMONIALS</div>
-                <h2 class="section-title">Real Dads, Real Results</h2>
-                <p class="section-description">Hear from fathers who transformed their health and confidence after 40</p>
-            </div>
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card scroll-reveal stagger-1">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I lost 35 pounds in 6 months without giving up the foods I love. The workouts are actually enjoyable, and I have more energy than I did 10 years ago."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JD</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">James D.</div>
-                            <div class="testimonial-role">Father of 3, Age 47</div>
-                        </div>
-                    </div>
-                </div>
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+}
 
-                <div class="testimonial-card scroll-reveal stagger-2">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"As someone who travels frequently for work, this program is a lifesaver. Workouts adapt to my schedule and I get coaching support whenever I need it."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MP</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Michael P.</div>
-                            <div class="testimonial-role">Executive, Age 52</div>
-                        </div>
-                    </div>
-                </div>
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #e0e7ff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-                <div class="testimonial-card scroll-reveal stagger-3">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The community aspect is incredible. Having other dads who get it—the time constraints, the injuries, the motivation struggles—made all the difference."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">RC</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Richard C.</div>
-                            <div class="testimonial-role">Small Business Owner, Age 45</div>
-                        </div>
-                    </div>
-                </div>
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
 
-                <div class="testimonial-card scroll-reveal stagger-4">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I never thought I'd be able to stick to a fitness program with three kids and a demanding job. FitDads made it actually possible."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">TB</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Tony B.</div>
-                            <div class="testimonial-role">Healthcare Professional, Age 48</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.btn-outline {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
 
-    <!-- ==================== PRICING ==================== -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">PRICING</div>
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-description">Choose the plan that works best for you. Cancel anytime, no questions asked.</p>
-            </div>
+.btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+}
 
-            <div class="pricing-toggle">
-                <span class="toggle-label">Monthly</span>
-                <div class="toggle-switch" id="billingToggle">
-                    <div class="toggle-slider"></div>
-                </div>
-                <span class="toggle-label">Yearly <span class="text-accent">(Save 30%)</span></span>
-            </div>
+.btn-sm {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+}
 
-            <div class="pricing-cards">
-                <div class="pricing-card scroll-reveal stagger-1">
-                    <h3 class="pricing-name">Starter</h3>
-                    <p class="pricing-description">Perfect for beginners</p>
-                    
-                    <div class="pricing-amount">
-                        <span class="price-currency">$</span>
-                        <span class="price" id="starter-price">29</span>
-                        <span class="price-period">/month</span>
-                    </div>
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+}
 
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>AI-powered workouts</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Basic nutrition plans</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Progress tracking</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Community access</span>
-                        </div>
-                    </div>
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    background: rgba(30, 41, 59, 0.8);
+    color: #f1f5f9;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
 
-                    <button class="btn btn-secondary" style="width: 100%;">Get Started</button>
-                </div>
+input::placeholder, textarea::placeholder {
+    color: rgba(224, 231, 255, 0.5);
+}
 
-                <div class="pricing-card featured scroll-reveal stagger-2">
-                    <div class="pricing-badge">MOST POPULAR</div>
-                    <h3 class="pricing-name">Pro</h3>
-                    <p class="pricing-description">Most popular choice</p>
-                    
-                    <div class="pricing-amount">
-                        <span class="price-currency">$</span>
-                        <span class="price" id="pro-price">59</span>
-                        <span class="price-period">/month</span>
-                    </div>
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: rgba(30, 41, 59, 0.95);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
 
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Everything in Starter</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Live coach access</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Advanced nutrition</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Mindset coaching</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Priority support</span>
-                        </div>
-                    </div>
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                    <button class="btn btn-primary" style="width: 100%;">Start Free Trial</button>
-                </div>
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                <div class="pricing-card scroll-reveal stagger-3">
-                    <h3 class="pricing-name">Elite</h3>
-                    <p class="pricing-description">For serious transformation</p>
-                    
-                    <div class="pricing-amount">
-                        <span class="price-currency">$</span>
-                        <span class="price" id="elite-price">99</span>
-                        <span class="price-period">/month</span>
-                    </div>
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Everything in Pro</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>1-on-1 coaching</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Personalized meal plans</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>Weekly check-ins</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <span class="pricing-feature-check">✓</span>
-                            <span>VIP community access</span>
-                        </div>
-                    </div>
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-                    <button class="btn btn-outline" style="width: 100%;">Contact Sales</button>
-                </div>
-            </div>
-        </div>
-    </section>
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-    <!-- ==================== FAQ ==================== -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">FAQ</div>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-description">Everything you need to know about FitDads</p>
-            </div>
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
-            <div class="faq-content">
-                <div class="faq-item scroll-reveal stagger-1">
-                    <div class="faq-question">
-                        <span class="faq-question-text">Do I need any equipment to get started?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="faq-answer-text">No! Many of our most popular workouts use just your bodyweight. We do offer modifications for those with dumbbells or other equipment, but it's completely optional.</p>
-                    </div>
-                </div>
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    }
+}
 
-                <div class="faq-item scroll-reveal stagger-2">
-                    <div class="faq-question">
-                        <span class="faq-question-text">What if I have joint problems or injuries?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="faq-answer-text">Our coaches provide modifications for all exercises. You can also specify any injuries or limitations during onboarding, and the AI will personalize everything accordingly.</p>
-                    </div>
-                </div>
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                <div class="faq-item scroll-reveal stagger-3">
-                    <div class="faq-question">
-                        <span class="faq-question-text">How much time per week do I need to commit?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="faq-answer-text">Our programs are flexible. Most members see results with just 3-4 workouts per week of 12-30 minutes each, plus simple nutrition guidelines. You're in control of your schedule.</p>
-                    </div>
-                </div>
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
 
-                <div class="faq-item scroll-reveal stagger-4">
-                    <div class="faq-question">
-                        <span class="faq-question-text">Can I cancel my subscription anytime?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="faq-answer-text">Absolutely. No contracts, no complicated cancellation process. You can cancel your subscription anytime from your account settings. We just ask for feedback to help us improve.</p>
-                    </div>
-                </div>
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
 
-                <div class="faq-item scroll-reveal stagger-5">
-                    <div class="faq-question">
-                        <span class="faq-question-text">Is there a money-back guarantee?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="faq-answer-text">Yes! We offer a 30-day money-back guarantee with our Pro and Elite plans. If you're not satisfied, we'll refund your money, no questions asked.</p>
-                    </div>
-                </div>
+.animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out;
+}
 
-                <div class="faq-item scroll-reveal stagger-6">
-                    <div class="faq-question">
-                        <span class="faq-question-text">How personalized are the workouts?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="faq-answer-text">Very! Our AI learns from your performance data, preferences, schedule, and feedback to continuously optimize your workouts for maximum results and sustainability.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out;
+}
 
-    <!-- ==================== FINAL CTA ==================== -->
-    <section class="final-cta">
-        <div class="final-cta-content">
-            <h2>Ready to Transform?</h2>
-            <p>Join thousands of fathers who've already reclaimed their strength and confidence. Your journey starts today.</p>
-            <button class="btn btn-primary btn-lg">Start Your Free Trial</button>
-            <p style="margin-top: 1.5rem; font-size: 0.875rem; color: #cbd5e1;">30-day money-back guarantee • No credit card required</p>
-        </div>
-    </section>
+.animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out;
+}
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section scroll-reveal stagger-1">
-                    <h3 class="footer-title">FitDads 40+</h3>
-                    <p style="color: #cbd5e1; margin-bottom: 1.5rem;">Transform your body and reclaim your confidence after 40.</p>
-                    <div class="footer-socials">
-                        <a href="#" class="social-link" title="Facebook">f</a>
-                        <a href="#" class="social-link" title="Instagram">📷</a>
-                        <a href="#" class="social-link" title="Twitter">𝕏</a>
-                        <a href="#" class="social-link" title="LinkedIn">in</a>
-                    </div>
-                </div>
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out;
+}
 
-                <div class="footer-section scroll-reveal stagger-2">
-                    <h3 class="footer-title">Product</h3>
-                    <a href="#" class="footer-link">Features</a>
-                    <a href="#" class="footer-link">Pricing</a>
-                    <a href="#" class="footer-link">Security</a>
-                    <a href="#" class="footer-link">Mobile App</a>
-                </div>
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
 
-                <div class="footer-section scroll-reveal stagger-3">
-                    <h3 class="footer-title">Company</h3>
-                    <a href="#" class="footer-link">About Us</a>
-                    <a href="#" class="footer-link">Blog</a>
-                    <a href="#" class="footer-link">Careers</a>
-                    <a href="#" class="footer-link">Contact</a>
-                </div>
+.scroll-reveal.reveal {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
 
-                <div class="footer-section scroll-reveal stagger-4">
-                    <h3 class="footer-title">Legal</h3>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Service</a>
-                    <a href="#" class="footer-link">Disclaimer</a>
-                    <a href="#" class="footer-link">Cookies</a>
-                </div>
-            </div>
+.stagger-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
 
-            <div class="footer-bottom">
-                <p class="footer-bottom-text">&copy; 2024 FitDads 40+. All rights reserved. | Made for busy fathers, by people who care.</p>
-                <div class="footer-socials" style="margin: 0;"></div>
-            </div>
-        </div>
-    </footer>
+/* ==================== NAVBAR ==================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.navbar.scrolled {
+    height: 70px;
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.logo span {
+    color: #f59e0b;
+}
+
+.nav-links {
+    display: none;
+    gap: 2rem;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #f59e0b);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.nav-cta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #e0e7ff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex !important;
+        position: static;
+        background: none;
+        border: none;
+        padding: 0;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navbar-content {
+        padding: 0 2rem;
+    }
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    margin-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.1), transparent);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite 1s;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero h1 {
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.375rem);
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.stat {
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* ==================== SOCIAL PROOF ==================== */
+.social-proof {
+    padding: 4rem 1.5rem;
+    background: rgba(30, 41, 59, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 5;
+}
+
+.social-proof-content {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.proof-label {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.proof-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.proof-logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.proof-logo:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* ==================== FEATURES SECTION ==================== */
+.features {
+    padding: 6rem 1.5rem;
+    position: relative;
+    z-index: 5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #cbd5e1;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* ==================== STEP 5: PREMIUM GLASS CARDS ==================== */
+.feature-card,
+.testimonial-card,
+.pricing-card {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(245, 158, 11, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(59, 130, 246, 0.5);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.6));
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(245, 158, 11, 0.3));
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(245, 158, 11, 0.5));
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    color: #f1f5f9;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-description {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== PRODUCT SHOWCASE ==================== */
+.product-showcase {
+    padding: 6rem 1.5rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(245, 158, 11, 0.05));
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 5;
+}
+
+.showcase-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.showcase-text h2 {
+    margin-bottom: 1.5rem;
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.showcase-text p {
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    animation: fadeInLeft 0.8s ease-out 0.1s both;
+}
+
+.showcase-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.showcase-item {
+    display: flex;
+    gap: 1rem;
+    animation: fadeInLeft 0.8s ease-out 0.2s both;
+}
+
+.showcase-check {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.showcase-text-item {
+    flex-grow: 1;
+}
+
+.showcase-text-item strong {
+    color: #f1f5f9;
+}
+
+.showcase-text-item 
